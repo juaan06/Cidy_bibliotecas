@@ -1,0 +1,377 @@
+/* Add at the beginning of the file */
+body {
+    margin-left: 250px; /* Same as sidebar width */
+}
+
+.container {
+    padding: 20px;
+}
+
+/* Update body styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Update sidebar styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(25,35,75,0.98) 0%, rgba(44,62,80,0.98) 100%);
+    color: #ecf0f1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    background-image: url('http://localhost/mvc/vistas/img/fondo_sidebar.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 1000;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.2);
+}
+
+/* Modificar la navegación para permitir scroll */
+.sidebar-nav {
+    flex: 1;
+    padding: 20px 0;
+    overflow-y: auto; /* Agregar scroll vertical */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(100,255,218,0.2) transparent;
+}
+
+/* Estilos para el scrollbar (Webkit) */
+.sidebar-nav::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background-color: rgba(100,255,218,0.2);
+    border-radius: 3px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(100,255,218,0.4);
+}
+
+/* Asegurar que el header y footer permanezcan fijos */
+.sidebar-header {
+    position: sticky;
+    top: 0;
+    background: inherit;
+    z-index: 10;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-footer {
+    position: sticky;
+    bottom: 0;
+    background: inherit;
+    z-index: 10;
+    padding: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Ajustar el espaciado interno de las secciones */
+.nav-section {
+    padding: 0 15px;
+    margin: 10px 0;
+}
+
+/* Asegurar que el contenido principal no se superponga */
+body {
+    margin-left: 250px;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* Efecto de partículas en hover */
+.sidebar-nav a {
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar-nav a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 152, 219, 0.1);
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-nav a:hover::before {
+    transform: translateY(-50%) scaleX(1);
+    transform-origin: left;
+}
+
+/* Efecto de partículas */
+@keyframes particles {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(20px);
+        opacity: 0;
+    }
+}
+
+.sidebar-nav a:hover::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #3498db;
+    border-radius: 50%;
+    left: 20px;
+    animation: particles 0.8s linear infinite;
+}
+
+/* Múltiples partículas */
+.sidebar-nav a:hover::before {
+    box-shadow: 
+        0 0 2px #3498db,
+        0 0 5px #3498db,
+        0 0 10px #3498db;
+}
+
+/* Mantener la animación existente y mejorarla */
+.sidebar-nav a:hover {
+    background: rgba(52, 73, 94, 0.8);
+    padding-left: 25px;
+    transform: translateX(5px);
+    box-shadow: inset 0 0 15px rgba(52, 152, 219, 0.2);
+}
+
+/* Mejorar transiciones */
+.sidebar-nav a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Encabezado del Sidebar */
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #34495e;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ecf0f1;
+}
+
+/* Navegación */
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 5px;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+  background: #34495e;
+  padding-left: 25px;
+}
+
+.sidebar-nav i {
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+/* Footer del Sidebar */
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid #34495e;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sidebar-footer a {
+  color: #ecf0f1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.sidebar-footer a:hover {
+  color: #3498db;
+}
+
+.sidebar-footer i {
+  margin-right: 8px;
+}
+
+/* Efectos hover */
+.sidebar-nav a:hover,
+.sidebar-footer a:hover {
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 200px;
+      transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+      transform: translateX(0);
+  }
+}
+
+/* Actualizaciones al CSS existente */
+.sidebar {
+    background: linear-gradient(135deg, rgba(25,35,75,0.95) 0%, rgba(44,62,80,0.95) 100%);
+    box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+.sidebar-header {
+    padding: 25px 20px;
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+}
+
+.sidebar-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.nav-section {
+    margin: 20px 0;
+    padding: 0 15px;
+}
+
+.nav-section h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #64ffda;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.sidebar-nav a {
+    border-radius: 8px;
+    margin: 2px 0;
+    padding: 12px 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-nav a:hover {
+    background: rgba(100,255,218,0.1);
+    transform: translateX(5px);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.user-info i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #64ffda;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    color: #dc3545;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: rgba(255,59,48,0.1);
+    border-radius: 8px;
+    margin: 10px;
+    text-align: center;
+}
+
+.logout-btn:hover {
+    background-color: #dc3545;
+    color: white;
+    transform: translateX(5px);
+}
+
+.logout-btn i {
+    font-size: 1.2rem;
+
+    background: rgba(255,59,48,0.1);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: rgba(255,59,48,0.2);
+    color: #ff3b30;
+}
+
+/* Animación de partículas mejorada */
+@keyframes particles {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 0;
+        box-shadow: 0 0 0 0 rgba(100,255,218,0.1);
+    }
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 4px 2px rgba(100,255,218,0.3);
+    }
+    100% {
+        transform: scale(0) translateY(-100px);
+        opacity: 0;
+    }
+}

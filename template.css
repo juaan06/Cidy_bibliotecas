@@ -1,0 +1,48 @@
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    transition: margin-left 0.3s;
+    padding: 0;
+}
+
+.main-content.full-width {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* When sidebar is collapsed */
+.sidebar-collapsed .main-content {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* Remove any body margin/padding */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    transition: margin-left 0.3s;
+    padding: 0;
+}
+
+.main-content.full-width {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* When sidebar is collapsed */
+.sidebar-collapsed .main-content {
+    margin-left: 0;
+    width: 100%;
+}

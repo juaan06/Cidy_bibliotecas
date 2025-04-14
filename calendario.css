@@ -1,0 +1,143 @@
+.calendario-container {
+    padding: 2rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+.calendario-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.calendario-header h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.calendario-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn-control {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.btn-control:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.calendario-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.calendario-dia {
+    background-color: white;
+    min-height: 120px;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.dia-semana {
+    background-color: #f8f9fa;
+    min-height: auto !important;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.calendario-dia.today {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.calendario-dia.empty {
+    background-color: #f8f9fa;
+}
+
+.dia-numero {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.eventos-lista {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.eventos-container {
+    margin-top: 1rem;
+}
+
+.evento-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border-left: 4px solid #3498db;
+    background-color: #f8f9fa;
+    margin-bottom: 0.5rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.calendario-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-action {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-action:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .calendario-container {
+        padding: 1rem;
+    }
+    
+    .calendario-dia {
+        min-height: 80px;
+    }
+    
+    .btn-action {
+        padding: 0.5rem 1rem;
+    }
+}
